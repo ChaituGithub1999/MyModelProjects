@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ 	<!--  import resource="employeeBeans.xml"/ -->
+
+    <!-- bean definitions here -->
+
+<bean name="person" class="com.spring.practice.Person" scope="singleton" > 
+
+<property name="name" value="Chaitu"  ></property>
+<property name="age"   value="22"      ></property>
+<property name="org"   ref="222"     ></property>
+
+
+<!-- 
+ <constructor-arg value="Chaitu" ></constructor-arg>
+ <constructor-arg value="22" ></constructor-arg>
+
+ -->
+
+</bean>
+
+<bean id="222" class="com.spring.practice.Organisation"  >
+
+<property name="IdNumber" value="23234"  ></property>
+<property name="salary"   value="22345"      ></property>
+
+
+
+</bean>
+
+
+</beans>
